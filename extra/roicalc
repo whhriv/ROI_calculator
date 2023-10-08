@@ -1,0 +1,35 @@
+#RUN.py
+
+from app.main import Property, Calc
+
+class Roic:
+    def __init__(self):
+    self.cashout = []
+    self.cashin = []
+    self.roi = []
+   
+    def __init__(self):
+        # self.expenses = []
+        self.income = []
+        self.roi = []
+
+    def get_closing_cost(self):
+        totalspent = input('What was the total you purchased the property for?: ')
+
+
+    
+
+
+# class Expenses:
+#     def __init__(self):
+#         self.taxes = []
+        
+#     def monthly_expenses(self):    
+#         tax_month = input('monthly taxes on property:  ')
+#         insurance = input('How much are you paying in insurance per month?: ')
+        
+
+# class Utilities:
+#     def __init__(self):
+#         self.PGE = []
+#     def 
