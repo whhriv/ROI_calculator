@@ -43,15 +43,17 @@ def run_stuff():
             roi.add_expense(mortgage)
         except ValueError:
             print("Please enter a valid number")
-#         print('{self.income}')
-#         print('{income}')
-#         print("""         
-#         Total Income: {income}
-#         Total Expenses: {expenses}
-#         Total investment: {total_invest} 
-#         {inflow}
-#         {roi_done} 
-# """)
-        # print(f'{roi.__init__()}')
+
+        roi.calculate_roi()
+
+        print(f"""
+        Total Income: {roi.income}
+        Total Expenses: {roi.expenses}
+        Total investment: {roi.total_invest} 
+        Inflow: {roi.inflow}
+        ROI: {roi.calculate_roi()}%
+        """)
+
+
 if __name__ == "__main__":
     run_stuff()

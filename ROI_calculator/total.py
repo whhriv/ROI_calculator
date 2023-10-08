@@ -10,10 +10,12 @@ class Roi:
         if income >= 0:
             self.income += income
             print(self.income)
+
     def add_expense(self, expenses):
         if expenses >= 0:
             self.expenses += expenses
             print(self.expenses)
+
     def cash_flow(self):
         if self.income and self.expenses >= 0:
             inflow = (self.income - self.expenses) * 24
@@ -25,16 +27,18 @@ class Roi:
     def prop_value(self, prop_val):
         self.value += prop_val
         self.total_invest += (self.value * 0.2)
-        print(f"(self.value * 0.2)")
+        print(self.value * 0.2)
+
     def misc_costs(self, misc):
-        print(f'self.total_invest += misc')
+        print(f'self.total_invest += {misc}')
         self.total_invest += misc
 
     def calculate_roi(self):
-        print(f'(self.inflow / self.total_invest) * 100')
+        print(f'{self.inflow / self.total_invest * 100}')
+
         roi_done = (self.inflow / self.total_invest) * 100
         print(roi_done)
-        return (self.inflow / self.total_invest) * 100
+        return roi_done
 
 def run_stuff():
     roi = Roi()
@@ -80,15 +84,16 @@ def run_stuff():
             roi.add_expense(mortgage)
         except ValueError:
             print("Please enter a valid number")
-        print('{self.income}')
-        print('{income}')
-        print("""         
-        Total Income: {income}
-        Total Expenses: {expenses}
-        Total investment: {total_invest} 
-        {inflow}
-        {roi_done} 
-""")
+
+        roi.calculate_roi()
+
+        print(f"""
+        Total Income: {roi.income}
+        Total Expenses: {roi.expenses}
+        Total investment: {roi.total_invest} 
+        Inflow: {roi.inflow}
+        ROI: {roi.calculate_roi()}%
+        """)
 
 if __name__ == "__main__":
     run_stuff()
