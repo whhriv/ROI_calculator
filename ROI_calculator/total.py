@@ -39,7 +39,7 @@ class Roi:
         return self.total_invest
     
     def calculate_roi(self):
-        print(f'{self.inflow / self.total_invest * 100}')
+        print(f'{(self.inflow / self.total_invest) * 100}')
 
         roi_done = (self.inflow / self.total_invest) * 100
         print(roi_done)
