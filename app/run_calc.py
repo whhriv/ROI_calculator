@@ -1,5 +1,6 @@
 # BLOG
 # from msilib.schema import SelfReg
+from models import Properties
 from typing import Self
 from models import Properties
 prop = Properties()

@@ -16,13 +16,16 @@ class Roi:
             self.expenses += expenses
             print(self.expenses)
             return self.expenses
-    def cash_flow(self):
-        if self.income and self.expenses >= 0:
-            inflow = (self.income - self.expenses) * 24
-            print(inflow)
-            return inflow
-        else:
-            return 0
+    
+    ##PROBLEMATIC
+    def cash_flow(self, income, expenses):
+        # if self.income:
+        incomeX = (self.income - self.expenses) 
+        self.inflow = incomeX * 12
+        print(self.inflow)
+        return self.inflow
+        # else:
+        #     return 0
 
     def prop_value(self, prop_val):
         self.value += (prop_val * 0.2)
