@@ -10,11 +10,13 @@ class Roi:
         if income >= 0:
             self.income += income
             print(self.income)
+            return self.income
 
     def add_expense(self, expenses):
         if expenses >= 0:
             self.expenses += expenses
             print(self.expenses)
+            return self.expenses
 
     def cash_flow(self):
         if self.income and self.expenses >= 0:
@@ -28,11 +30,14 @@ class Roi:
         self.value += prop_val
         self.total_invest += (self.value * 0.2)
         print(self.value * 0.2)
+        return self.total_invest
+    
 
     def misc_costs(self, misc):
         print(f'self.total_invest += {misc}')
         self.total_invest += misc
-
+        return self.total_invest
+    
     def calculate_roi(self):
         print(f'{self.inflow / self.total_invest * 100}')
 
